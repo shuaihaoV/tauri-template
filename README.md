@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js + Tauri 2.0 模板
 
-## Getting Started
+这是一个使用 Next.js 和 Tauri 2.0 构建跨平台桌面应用的入门模板。
 
-First, run the development server:
+它集成了最新的前端技术栈，让您能够快速启动并构建现代化、高性能的桌面应用程序。
+
+## ✨ 特性
+
+- **[Next.js](https://nextjs.org/)**: 使用 App Router 和 Turbopack，提供极致的开发体验和性能。
+- **[Tauri 2.0](https://tauri.app/)**: 使用 Rust 构建轻量、安全、跨平台的桌面应用后端。
+- **[shadcn/ui](https://ui.shadcn.com/)**: 精美、可定制的 UI 组件库。
+- **[Tailwind CSS](https://tailwindcss.com/)**: 一个功能类优先的 CSS 框架。
+- **主题切换**: 支持亮色/暗色模式切换。
+- **代码规范**: 集成 ESLint，保证代码质量。
+
+## 🚀 开始使用
+
+### 1. 环境准备
+
+在开始之前，请确保您的开发环境中已安装以下工具：
+
+1.  **Node.js**: [https://nodejs.org/](https://nodejs.org/)
+2.  **Rust**: [https://www.rust-lang.org/](https://www.rust-lang.org/)
+3.  **Tauri 环境依赖**: 根据您的操作系统，按照 [Tauri 官方文档](https://tauri.app/v2/guides/getting-started/prerequisites) 完成配置。
+
+### 2. 安装
+
+克隆项目到本地：
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <your-repo-url>
+cd <project-folder>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+包管理器安装依赖：
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+bun install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. 开发
 
-## Learn More
+此项目包含两种开发模式：
 
-To learn more about Next.js, take a look at the following resources:
+- **Web 开发模式**: 仅启动 Next.js 前端应用。这对于快速调试 UI 非常有用。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  ```bash
+  bun run dev
+  ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+  在浏览器中打开 [http://localhost:3000](http://localhost:3000) 查看。
 
-## Deploy on Vercel
+- **桌面应用开发模式**: 同时启动 Next.js 前端和 Tauri 后端。
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  ```bash
+  cargo tauri dev
+  ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  这将启动一个桌面窗口，并加载您的应用。
+
+### 4. 构建
+
+要构建生产环境的桌面应用，请运行：
+
+```bash
+cargo tauri build
+```
+
+构建完成后，安装包会出现在 `src-tauri/gen/release/bundle` 目录下。
+
+## 📁 目录结构
+
+- `app/`: Next.js 的页面、路由和布局。
+- `components/`: 可复用的 React 组件，特别是 `shadcn/ui` 组件。
+- `lib/`: 辅助函数和工具。
+- `public/`: 静态资源文件。
+- `src-tauri/`: 所有 Tauri 相关的 Rust 代码，包括后端逻辑和应用配置。
+
+## 📚 了解更多
+
+- [Next.js 文档](https://nextjs.org/docs)
+- [Tauri 文档](https://tauri.app/v2/guides/)
+- [shadcn/ui 文档](https://ui.shadcn.com/docs)
+- [Tailwind CSS 文档](https://tailwindcss.com/docs)
