@@ -1,5 +1,10 @@
 # Next.js + Tauri 2.0 模板
 
+![构建状态](https://github.com/shuaihaoV/tauri-template/workflows/release/badge.svg)
+![CI状态](https://github.com/shuaihaoV/tauri-template/workflows/ci/badge.svg)
+![License](https://img.shields.io/github/license/shuaihaoV/tauri-template)
+![Release](https://img.shields.io/github/v/release/shuaihaoV/tauri-template)
+
 这是一个使用 Next.js 和 Tauri 2.0 构建跨平台桌面应用的入门模板。
 
 它集成了最新的前端技术栈，让您能够快速启动并构建现代化、高性能的桌面应用程序。
