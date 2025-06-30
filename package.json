@@ -25,14 +25,14 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
-    "@tauri-apps/cli": "^2.5.0",
-    "@types/node": "^20",
+    "@tailwindcss/postcss": "4.1.11",
+    "@tauri-apps/cli": "2.6.2",
+    "@types/node": "22.9.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.3.3",
-    "tailwindcss": "^4",
+    "eslint": "9.30.0",
+    "eslint-config-next": "15.3.4",
+    "tailwindcss": "4.1.11",
     "tw-animate-css": "^1.3.4",
     "typescript": "^5"
   }
